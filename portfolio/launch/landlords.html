@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord Properties</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+    <header>
+        <h1>Landlord Properties</h1>
+    </header>
+
+    <div id="properties-container">
+        <h2>Your Properties</h2>
+        <ul id="property-list"></ul>
+    </div>
+
+    <footer style="background-color: limegreen; color: white;">
+        <p>Portfolio Properties Management</p>
+    </footer>
+
+    <script src=" {{ url_for('static', filename='properties.js') }} "></script>
+</body>
+</html>

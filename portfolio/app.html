@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve Properties Management</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+</head>
+<body style="background-color: red;">
+    <header style="color: black;">
+        <h1>Steve Properties Management</h1>
+    </header>
+
+    <!-- Login form for landlords and tenants -->
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Log In</button>
+    </form>
+
+    <!-- Display properties for landlords or tenants -->
+    <div id="properties-container" style="display:none;">
+        <h2>Your Properties</h2>
+        <ul id="property-list"></ul>
+    </div>
+
+    <footer style="background-color: limegreen; color: white;">
+        <p>Portfolio Properties Management</p>
+    </footer>
+
+    <script src="scripts/login.js"></script>
+    <script src="scripts/properties.js"></script>
+</body>
+</html>
