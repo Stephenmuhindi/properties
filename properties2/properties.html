@@ -1,0 +1,50 @@
+CTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Steve Application</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<!-- Landlord Dashboard -->
+		<h2>Landlord Dashboard:</h2>
+		<div class="dropdown">
+			<button class="dropbtn">Login</button>
+			<div class="dropdown-content">
+				<a href="#" id="landlord-login">Landlord Login</a>
+				<a href="#" id="tenant-login">Tenant Login</a>
+			</div>
+		</div>
+		<div id="landlord-login-form" class="login-form" style="display: none;">
+			<!-- Landlord login form here -->
+			<!-- Add your form elements and submit button for landlord login -->
+			<form id="landlord-form">
+				<input type="text" placeholder="Username" name="username" required><br>
+				<input type="password" placeholder="Password" name="password" required><br>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+
+		<!-- Tenant Dashboard -->
+		<h2>Tenant Dashboard:</h2>
+		<div class="dropdown">
+			<button class="dropbtn">Login</button>
+			<div class="dropdown-content">
+				<a href="#" id="tenant-login">Tenant Login</a>
+				<a href="#" id="landlord-login">Landlord Login</a> <!-- Reordered for consistency -->
+			</div>
+		</div>
+		<div id="tenant-login-form" class="login-form" style="display: none;">
+			<!-- Tenant login form here -->
+			<!-- Add your form elements and submit button for tenant login -->
+			<form id="tenant-form">
+				<input type="text" placeholder="Username" name="username" required><br>
+				<input type="password" placeholder="Password" name="password" required><br>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
