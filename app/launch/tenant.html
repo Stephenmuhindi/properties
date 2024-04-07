@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve Properties Management</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body style="background-color: red;">
+    <header style="color: black;">
+        <h1>Steve Properties Management</h1>
+    </header>
+
+    <form id="login-form" method="post" action="#">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required value="tenant">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required value="password">
+        <br>
+        <button type="submit">Log In</button>
+    </form>
+
+    <div id="properties-container" style="display: block;">
+        <h2>Your Properties</h2>
+        <ul id="property-list">
+        {% for property in properties %}
+            <li>
+                {{ property.id }} - {{ property.address }}, {{ property.city }}, {{ property.state }} {{ property.zip }}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <footer style="background-color: limegreen; color: white;">
+        <p>Portfolio Properties Management</p>
+    </footer>
+
+    <script src=" {{ url_for('static', filename='login.js') }} "></script>
+    <script src=" {{ url_for('static', filename='properties.js') }} "></script>
+</body>
+</html>
