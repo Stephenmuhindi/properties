@@ -1,82 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Steve Properties Management</title>
-		<link rel="stylesheet" type="text/css" href="styles/styles.css" />
-	</head>
-	<body style="background-color: teal;">
-		<header style="color: black;">
-			<figure class="logo-wrapper">
-				<img
-					id="logo"
-					src="images/logo.png"
-					alt="Website Logo"
-					/>
-				<figcaption>Steve Properties Management</figcaption>
-			</figure>
-		</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve Properties Management</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+</head>
+<body style="background-color: teal;">
+<header style="color: black;">
+    <figure class="logo-wrapper">
+        <!-- Update the src attribute with the path to your local image -->
+        <img
+            id="logo"
+            src="C:\Users\PC\Desktop\scn\logoyangu.jpg"
+            alt="Website Logo"
+            />
+        <figcaption>Steve Properties Management</figcaption>
+    </figure>
+</header>
 
-		<!-- Login form for landlords and tenants -->
-		<form id="login-form">
-			<label for="username">Username:</label>
-			<input type="text" id="username" name="username" required>
-			<br>
-			<label for="password">Password:</label>
-			<input type="password" id="password" name="password" required>
-			<br>
-			<button type="submit">Log In</button>
-		</form>
+<!-- Login form for landlords and tenants -->
+<form id="login-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <button type="submit">Log In</button>
+</form>
 
-		<!-- Display properties for landlords or tenants -->
-		<div id="properties-container" style="display:none;">
-			<h2>Your Properties</h2>
-			<figure>
-				<img id="property-image" src="images/property.jpg" alt="Property image">
-				<figcaption id="property-caption"></figcaption>
-			</figure>
-			<ul id="property-list">
-				<!-- Add list items for each apartment -->
-				<li>
-					<h3>Apartment 1</h3>
-					<img src="images/apartment1.jpg" alt="Apartment 1">
-				</li>
-				<li>
-					<h3>Apartment 2</h3>
-					<img src="images/apartment2.jpg" alt="Apartment 2">
-				</li>
-				<!-- Add more apartments as needed -->
-			</ul>
-		</div>
+<!-- Display properties for landlords or tenants -->
+<div id="properties-container" style="display:none;">
+    <h2>Your Properties</h2>
+    <figure>
+        <img id="property-image" src="images/property.jpg" alt="Property image">
+        <figcaption id="property-caption"></figcaption>
+    </figure>
+    <ul id="property-list">
+        <!-- Add list items for each apartment -->
+        <li>
+            <h3>Apartment 1</h3>
+            <img src="images/apartment1.jpg" alt="Apartment 1">
+        </li>
+        <li>
+            <h3>Apartment 2</h3>
+            <img src="images/apartment2.jpg" alt="Apartment 2">
+        </li>
+        <!-- Add more apartments as needed -->
+    </ul>
+</div>
 
-		<footer style="background-color: limegreen; color: white;">
-			<p>Portfolio Properties Management</p>
-		</footer>
+<footer style="background-color: limegreen; color: white;">
+    <p>Portfolio Properties Management</p>
+</footer>
 
-		<script src="scripts/login.js"></script>
-		<script src="scripts/properties.js"></script>
-		<script>
-			// Sample property data
-			const property = {
-				name: "Sample Property",
-				image_url: "images/property.jpg",
-				address: "123 Sample Street",
-				apartments: ["Apartment 1", "Apartment 2", "Apartment 3"]
-			};
+<script src="scripts/login.js"></script>
+<script src="scripts/properties.js"></script>
+<script>
+    // Sample property data
+    const property = {
+        name: "Sample Property",
+        image_url: "images/property.jpg",
+        address: "123 Sample Street",
+        apartments: ["Apartment 1", "Apartment 2", "Apartment 3"]
+    };
 
-// Display property details
-function displayPropertyDetails(property) {
-	document.getElementById("property-caption").innerText = `${property.name}\n${property.address}`;
-	document.getElementById("property-image").src = property.image_url;
-	// You can add more details here
-}
+    // Display property details
+    function displayPropertyDetails(property) {
+        document.getElementById("property-caption").innerText = `${property.name}\n${property.address}`;
+        document.getElementById("property-image").src = property.image_url;
+    }
 
-// Fetch and display property details
-window.onload = function () {
-	displayPropertyDetails(property);
-};
-		</script>
-	</body>
+    // Fetch and display property details
+    window.onload = function () {
+        displayPropertyDetails(property);
+    };
+</script>
+</body>
 </html>
 
